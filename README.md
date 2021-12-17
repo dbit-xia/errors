@@ -2,7 +2,7 @@
 
 Package errors provides simple error handling primitives.
 
-`go get github.com/pkg/errors`
+`go get github.com/dbit-xia/errors`
 
 The traditional error handling idiom in Go is roughly akin to
 ```go
@@ -18,7 +18,7 @@ The errors.Wrap function returns a new error that adds context to the original e
 ```go
 _, err := ioutil.ReadAll(r)
 if err != nil {
-        return errors.Wrap(err, "read failed")
+        return errors.Wrap(err, "read failed", 0)
 }
 ```
 ## Retrieving the cause of an error
